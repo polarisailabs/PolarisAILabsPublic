@@ -90,7 +90,7 @@ header .navbar {
 
 header .navbar-collapse  ul.navbar-nav {
     float: right;
-    margin-right: 0;
+    margin-right:0;
 }
 
 header .navbar-default {
@@ -139,7 +139,7 @@ header  .navbar-nav > li > a {
     padding-bottom: 6px;
     padding-top: 5px;
     margin-left: 2px;
-    line-height: 30px;
+    line-height: 7px;
 	font-weight: 700;
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
@@ -1519,8 +1519,8 @@ padding-top: 12px;
 
 	
 	.navbar-collapse.collapse  {
-		border: none;
-		overflow: hidden;
+		border:none;
+		overflow:visible;
 	}
 
 	
