@@ -1,9 +1,5 @@
-/*
-Author URI: http://webthemez.com/
-Note: 
-Licence under Creative Commons Attribution 3.0 
-Do not remove the back-link in this web template 
--------------------------------------------------------*/
+
+@import url('style.css');
 
 @import url('http://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:400,600,700'); 
 @import url('font-awesome.css');  
@@ -1502,7 +1498,7 @@ padding-top: 12px;
 	  z-index: 1000;
 	  display: none;
 	  float: left;
-	  min-width: 160px;
+	  min-width: 560px;
 	  padding: 5px 0;
 	  margin: 2px 0 0;
 	  font-size: 13px;
