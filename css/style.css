@@ -107,7 +107,6 @@ header .nav li.active ul.dropdown-menu li a:hover,
 header .nav li.active ul.dropdown-menu li.active a{
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
     -o-transition: all .3s ease;
     transition: all .3s ease;
 }
@@ -118,7 +117,6 @@ header .navbar-default .navbar-nav > .open > a:hover,
 header .navbar-default .navbar-nav > .open > a:focus {
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
     -o-transition: all .3s ease;
     transition: all .3s ease;
 }
@@ -133,7 +131,7 @@ header .navbar-nav > li  {
     padding-bottom: 8px;
     padding-top: 2px;
 	padding-left:25px;
-	padding-right:10px;
+	padding-right:5px;
 }
 
 header  .navbar-nav > li > a {
@@ -144,7 +142,6 @@ header  .navbar-nav > li > a {
 	font-weight: 700;
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
     -o-transition: all .3s ease;
     transition: all .3s ease;
 }
@@ -171,7 +168,7 @@ header .nav .caret {
 	
 
 .dropdown-menu  {
-    box-shadow: none;
+    box-shadow:  none;
     border-radius: 0;
 	border: none;
 }
@@ -186,7 +183,7 @@ header .nav li .dropdown-menu  {
 }
 
 header .nav li .dropdown-menu li a {
-   line-height: 28px;
+   line-height: 20px;
    padding: 3px 12px;
 }
 
@@ -194,7 +191,6 @@ header .nav li .dropdown-menu li a {
 
 header .navigation {
 	float:right;
-	text-align:right;
 }
 
 header ul.nav li {
@@ -211,8 +207,8 @@ header ul.nav li a {
 header ul.nav li ul li a {	
 	font-size:17px;
 	border:  solid;
-	font-weight:bold;
-	text-transform:none;
+	font-weight:700;
+	text-transform: inherit;
 	font-family:'Segoe UI Historic'
 }
 
@@ -224,7 +220,7 @@ header ul.nav li ul li a {
 }
 
 .navbar .nav a:hover {
-	background:none;
+	background: none;
 }
 
 .navbar .nav > .active > a,.navbar .nav > .active > a:hover {
@@ -1472,7 +1468,7 @@ article img.pull-right, article .align-right{
     padding-left: 0;
   }
 	.navbar-brand {
-		margin-top: 10px;
+		margin-top: 20px;
 		border-bottom: none;
 	}
 	.navbar-header {
@@ -1509,7 +1505,7 @@ padding-top: 12px;
 	  padding: 5px 0;
 	  margin: 2px 0 0;
 	  font-size: 13px;
-	  list-style: none;
+	  list-style:  none;
 	  background-color: #fff;
 	  background-clip: padding-box;
 	  border: 1px solid #f5f5f5;
