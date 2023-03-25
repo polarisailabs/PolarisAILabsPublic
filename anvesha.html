@@ -129,6 +129,50 @@
             </div>
         </section>-->
 
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 col-lg-5 col-md-offset-3">
+                                    <!--<div class="alert alert-success hidden" id="contactSuccess">
+                    <strong>Success!</strong> Your message has been sent to us.
+                </div>
+                <div class="alert alert-error hidden" id="contactError">
+                    <strong>Error!</strong> There was an error sending your message.
+                </div>-->
+                        <h4 class="pageTitle" style="text-shadow: 0px 0px 1px black;text-align:center;color:black">Please contact us with any questions or feedback</h4><br /><br /><br /><br />
+
+                        <div class="contact-form">
+                            <form id="contact-form" role="form" novalidate="novalidate">
+                                <div class="form-group has-feedback">
+                                    <label for="name">Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="">
+                                    <i class="fa fa-user form-control-feedback"></i>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="">
+                                    <i class="fa fa-envelope form-control-feedback"></i>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label for="email">Phone</label>
+                                    <input type="email" class="form-control" id="phone" name="phone" placeholder="">
+                                    <i class="fa fa-mobile-phone form-control-feedback"></i>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label for="message">Comment</label>
+                                    <textarea class="form-control" rows="6" id="comment" name="comment" placeholder=""></textarea>
+                                    <i class="fa fa-pencil form-control-feedback"></i>
+                                </div>
+                                <div style="text-align: right;">
+                                    <input type="submit" value="Submit" class="btn btn-default">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br /><br /><br /><br />
+        </section>
         <div class="testimonial-area">
             <div class="testimonial-solid">
                 <div class="container">
@@ -253,19 +297,37 @@
             </div>
         </footer>
     </div>
-<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
-<!-- javascript
-    ================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="js/jquery.js"></script>
-<script src="js/jquery.easing.1.3.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.fancybox.pack.js"></script>
-<script src="js/jquery.fancybox-media.js"></script> 
-<script src="js/portfolio/jquery.quicksand.js"></script>
-<script src="js/portfolio/setting.js"></script>
-<script src="js/jquery.flexslider.js"></script>
-<script src="js/animate.js"></script>
-<script src="js/custom.js"></script>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+    <!-- javascript
+        ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
+    <script src="js/jquery.fancybox-media.js"></script>
+    <script src="js/portfolio/jquery.quicksand.js"></script>
+    <script src="js/portfolio/setting.js"></script>
+    <script src="js/jquery.flexslider.js"></script>
+    <script src="js/animate.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function (event) {
+            event.preventDefault(); // prevent default form submission
+
+            var formData = new FormData(this); // create a new FormData object with form data
+
+            var xhr = new XMLHttpRequest(); // create a new XMLHttpRequest object
+            xhr.open("POST", "http://gopala-krishna.tech/Search.aspx"); // specify the URL to send the request to
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    alert("Thanks for contacting us. We will get back to you soon");
+                } else {
+                    alert("There was an error processing the data.");
+                }
+            };
+            xhr.send(formData); // send the form data as the request body
+        });
+    </script>
 </body>
 </html>
