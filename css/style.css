@@ -124,14 +124,14 @@ header .navbar-default .navbar-nav > .open > a:focus {
 
 header .navbar {
     min-height: 10px; 
-	padding:8px 0;
+	padding:10px 0;
 }
 
 header .navbar-nav > li  {
     padding-bottom: 8px;
     padding-top: 2px;
-	padding-left:25px;
-	padding-right:5px;
+	padding-left:20px;
+	padding-right:10px;
 }
 
 header  .navbar-nav > li > a {
