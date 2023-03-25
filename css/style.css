@@ -205,13 +205,14 @@ header ul.nav li a {
 	font-weight:700;
 }
 
-header ul.nav li ul li a {	
-	font-size:17px;
-	border:  solid;
-	font-weight:700;
-	text-transform: inherit;
-	font-family:'Segoe UI Historic'
-}
+	header ul.nav li ul li a {
+		font-size: 17px;
+		border: solid;
+		font-weight: 700;
+		/*text-transform: inherit;*/
+		/*font-family:'Segoe UI Historic'*/
+		max-width: 160px
+	}
 
 
 .navbar .nav > li > a {
