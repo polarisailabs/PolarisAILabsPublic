@@ -122,13 +122,13 @@ header .navbar-default .navbar-nav > .open > a:focus {
 
 
 header .navbar {
-    min-height: 70px; 
-	padding:18px 0;
+    min-height: 10px; 
+	padding:8px 0;
 }
 
 header .navbar-nav > li  {
-    padding-bottom: 12px;
-    padding-top: 12px;
+    padding-bottom: 8px;
+    padding-top: 2px;
 }
 
 header  .navbar-nav > li > a {
@@ -203,10 +203,11 @@ header ul.nav li a {
 }
 
 header ul.nav li ul li a {	
-	font-size:18px;
-	border:none;
-	font-weight:300;
+	font-size:17px;
+	border:  solid;
+	font-weight:bold;
 	text-transform:none;
+	font-family:'Segoe UI Historic'
 }
 
 
