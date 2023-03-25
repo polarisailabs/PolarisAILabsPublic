@@ -81,7 +81,7 @@ header .navbar {
     margin-top: 0px;
 	margin-bottom:0px;
     padding: 0px 0px 0px 0px;
-	padding-right:75px;
+	padding-right:0px;
 }
 .navbar-default .navbar-brand {
 	color: #05CCF0;
@@ -133,7 +133,7 @@ header .navbar-nav > li  {
     padding-bottom: 8px;
     padding-top: 2px;
 	padding-left:20px;
-	padding-right:10px;
+	padding-right:1px;
 }
 
 header  .navbar-nav > li > a {
