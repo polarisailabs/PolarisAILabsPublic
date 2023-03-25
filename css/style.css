@@ -1,6 +1,5 @@
 
 @import url('style.css');
-
 @import url('http://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:400,600,700'); 
 @import url('font-awesome.css');  
 @import url('animate.css');
@@ -8,7 +7,7 @@
 body {
 	font-family:'Segoe UI Historic';
 	font-size:16px;
-	font-weight:300;
+	font-weight:700;
 	line-height:1.6em;
 	color:#656565;
 }
@@ -68,10 +67,10 @@ header .navbar {
 .navbar-default {
     border: none;
 }
-.nav-menu li:first-child {
+/*.nav-menu li:first-child {
 	padding-left: 20px;
 }
-
+*/
 .navbar-brand {
     color: #222;
 	text-transform: lowercase;
@@ -82,7 +81,7 @@ header .navbar {
     margin-top: 0px;
 	margin-bottom:0px;
     padding: 0px 0px 0px 0px;
-	padding-right:20px;
+	padding-right:75px;
 }
 .navbar-default .navbar-brand {
 	color: #05CCF0;
