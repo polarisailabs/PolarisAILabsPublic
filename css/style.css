@@ -207,7 +207,7 @@ header ul.nav li a {
 
 	header ul.nav li ul li a {
 		font-size: 17px;
-		border: solid;
+		border:groove;
 		font-weight: 700;
 		/*text-transform: inherit;*/
 		/*font-family:'Segoe UI Historic'*/
