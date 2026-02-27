@@ -58,6 +58,53 @@
 		.icons.c3 { border-color: #33cccc !important; background: #33cccc !important; }
 		.icons.c4 { border-color: #6c3ce0 !important; background: #6c3ce0 !important; }
 
+        .skill-home-solid .box-area h3 {
+            font-size: 18px !important;
+        }
+
+        .skill-home-solid .box-area p {
+            font-size: 13px !important;
+        }
+/*        #main-slider .flexslider,
+        #main-slider ul.slides li img {
+            max-height: 350px;
+            object-fit: cover;
+        }*/
+        footer {
+            padding-top: 10px !important;
+            padding-bottom: 5px !important;
+        }
+
+            footer .row {
+                margin-top: 0 !important;
+                margin-bottom: 0 !important;
+            }
+
+            footer .widget {
+                margin-bottom: 6px !important;
+            }
+
+        #sub-footer {
+            padding: 5px 0 !important;
+        }
+
+        footer .widget h5.widgetheading {
+            font-size: 15px !important;
+            margin-bottom: 6px !important;
+        }
+
+        footer .widget p,
+        footer .widget address,
+        footer .widget ul.link-list li a {
+            font-size: 13px !important;
+            line-height: 1.5 !important;
+        }
+
+        #sub-footer p,
+        #sub-footer ul li a {
+            font-size: 11px !important;
+        }
+
 		/* ── Platform hero banner ── */
 		.platform-hero {
 			background: linear-gradient(135deg, #33cccc 0%, #0d7de8 50%, #6c3ce0 100%);
@@ -112,12 +159,17 @@
 
             .platform-hero .hero-title {
                 margin: 0;
-                font-size: 26px;
+                font-size: 20px;
                 font-weight: 700;
                 text-align: center;
                 color: #fff;
                 line-height: 1.2;
-                width: 100%;
+                display: inline-block;
+                border: 2px solid rgba(255,255,255,0.6);
+                border-radius: 10px;
+                background: rgba(255,255,255,0.12);
+                backdrop-filter: blur(4px);
+                padding: 10px 24px;
             }
 		.platform-hero .hero-badge {
 			background: rgba(255,255,255,0.2);
@@ -150,14 +202,38 @@
 			border-radius: 20px;
 		}
 		.platform-hero .hero-tag i { margin-right: 5px; font-size: 10px; }
-		.platform-hero .hero-links a {
-			color: #fff;
-			font-size: 13px;
-			font-weight: 600;
-			text-decoration: underline;
-			margin-right: 18px;
-		}
-		.platform-hero .hero-links a:hover { color: #d0f5ff; }
+            .platform-hero .hero-links {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                justify-content: center;
+                margin-top: 16px;
+            }
+
+                .platform-hero .hero-links a {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 7px;
+                    color: #fff;
+                    font-size: 12.5px;
+                    font-weight: 600;
+                    text-decoration: none;
+                    padding: 8px 18px;
+                    border: 2px solid rgba(255,255,255,0.6);
+                    border-radius: 25px;
+                    background: rgba(255,255,255,0.12);
+                    backdrop-filter: blur(4px);
+                    transition: all 0.2s ease;
+                    letter-spacing: 0.3px;
+                }
+
+                    .platform-hero .hero-links a:hover {
+                        background: rgba(255,255,255,0.28);
+                        border-color: #fff;
+                        color: #fff;
+                        transform: translateY(-1px);
+                        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+                    }
 
 		/* Drucker quote strip */
 		.quote-strip {
@@ -204,7 +280,6 @@
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Platform</a>
 							<ul class="dropdown-menu" style="text-align:center">
 								<li><a href="pap.html">PolarisAI Platform</a></li>
-								<li><a href="pap.html">Machine Learning</a></li>
 							</ul>
 						</li>
 						<li class="dropdown">
@@ -284,8 +359,8 @@
 						The PolarisAI Platform is purpose-built to do exactly that — build, optimize &amp; deploy Small Language Models that run on desktops, laptops &amp; mobile devices.Every module serves one mission: take a model from raw data all the way to a lean, production-ready SLM that fits in your environment, not just in a data centre. Our models are Pre-trained on curated domain corpora, Quantized to INT8/INT4 for minimal memory footprint, Distilled from larger teachers for maximum accuracy-per-parameter, Pruned to strip redundant weights, and fully Memory &amp; Compute Optimized for real-world edge, cloud and on-premise deployment.
 					</p>
 					<div class="hero-links">
-						<a href="pap.html"><i class="fa fa-external-link"></i> SLM Platform for Enterprises — PolarisAI Platform</a>
-						<a href="https://vegaaitravel.com/"><i class="fa fa-external-link"></i> Travel Memories App — VegaAI</a>
+						<a href="pap.html"><i class="fa fa-rocket"></i> Explore PolarisAI Platform</a>
+						<a href="https://vegaaitravel.com/"><i class="fa fa-plane"></i> Discover VegaAI</a>
 					</div>
 				</div>
 			</div>
@@ -317,7 +392,7 @@
 							<span class="icons c2"><i class="fa fa-rocket"></i></span>
 							<div class="box-area">
 								<h3 style="text-shadow:0px 0px 1px black">Mission</h3>
-								<p style="text-align:justify">We turn the vision into a concrete delivery roadmap — from selecting the right base model and training corpus, through quantization and distillation, to edge deployment and monitoring. Short-term milestones and long-term production targets are defined for every model in your portfolio.</p>
+								<p style="text-align:justify">We turn the vision into a concrete delivery roadmap — from selecting the right base model and training corpus, through quantization and distillation, to edge deployment and monitoring. Short-term milestones and long-term production targets are defined for every model in your product portfolio and roadmap.</p>
 							</div>
 						</div>
 
