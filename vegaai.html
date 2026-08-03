@@ -7,16 +7,377 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <title>VegaAI</title>
+    <title>VegaAI - AI Travel Co-pilot | PolarisAI Labs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="" />
+    <meta name="description"
+        content="VegaAI is the world's first AI-powered travel co-pilot delivering real-time, verified destination updates sourced directly from top travel influencers." />
     <meta name="author" content="http://polarisailabs.com" />
 
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
-    <link href="css/jcarousel.css" rel="stylesheet" />
     <link href="css/flexslider.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        /* ── Accent colour: #33cccc replaces site's #05CCF0 throughout (matches pap.html/index.html) ── */
+        header .navbar-default { border-bottom: 5px solid #33cccc !important; }
+        .navbar-default .navbar-brand { color: #33cccc !important; }
+        .navbar-default .navbar-nav > .active > a,
+        .navbar-default .navbar-nav > .active > a:hover,
+        .navbar-default .navbar-nav > .active > a:focus {
+            border: 1px solid #33cccc !important;
+        }
+        .testimonial-solid { background: #33cccc !important; }
+        .testi-icon-area .quote { color: #33cccc !important; border-color: #33cccc !important; }
+    </style>
+
+    <!-- ═══ VEGAAI PAGE STYLES ═══ -->
+    <style>
+        .platform-hero {
+            background: linear-gradient(135deg, #123a63 0%, #0d7de8 45%, #14b8a6 100%);
+            border-radius: 0;
+            padding: 42px 0;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 0;
+            margin-top: 70px;
+        }
+
+        .platform-hero::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 240px;
+            height: 240px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+        }
+
+        .platform-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -70px;
+            right: 120px;
+            width: 180px;
+            height: 180px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 50%;
+        }
+
+        .platform-hero .hero-inner {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 12px;
+        }
+
+        .platform-hero .hero-text {
+            text-align: center;
+            width: 100%;
+        }
+
+        .platform-hero .hero-title-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 6px;
+            flex-wrap: wrap;
+        }
+
+        .platform-hero .hero-icon-wrap {
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            backdrop-filter: blur(4px);
+            overflow: hidden;
+        }
+
+        .platform-hero .hero-icon-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .platform-hero .hero-title {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.2;
+        }
+
+        .platform-hero .hero-badge {
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            padding: 3px 12px;
+            border-radius: 14px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+        }
+
+        .platform-hero .hero-sub {
+            margin: 0 auto 4px auto;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 400;
+            max-width: 680px;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .hero-modules {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .hero-module-card {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(6px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 14px 16px;
+            color: #fff;
+            transition: background 0.2s;
+            box-sizing: border-box;
+        }
+
+        .hero-module-card:hover {
+            background: rgba(255, 255, 255, 0.20);
+        }
+
+        .hero-module-card i {
+            font-size: 18px;
+            margin-bottom: 7px;
+            display: block;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .hero-module-card .hm-title {
+            font-size: 12.5px;
+            font-weight: 700;
+            margin-bottom: 3px;
+        }
+
+        .hero-module-card .hm-sub {
+            font-size: 10.5px;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.4;
+        }
+
+        .hero-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .hero-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 22px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform .2s, box-shadow .2s;
+        }
+
+        .hero-links a.btn-primary-hero {
+            background: #fff;
+            color: #123a63;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-links a.btn-primary-hero:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+        }
+
+        .hero-links a.btn-ghost-hero {
+            background: rgba(255, 255, 255, 0.12);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.28);
+        }
+
+        .hero-links a.btn-ghost-hero:hover {
+            background: rgba(255, 255, 255, 0.22);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 992px) {
+            .hero-modules { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 480px) {
+            .hero-modules { grid-template-columns: 1fr; }
+        }
+
+        /* ── Stat highlights (Problem/Solution strip) ── */
+        .vega-stats-strip {
+            display: flex !important;
+            width: 100% !important;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin: 36px 0 8px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .vega-stats-strip > div {
+            min-width: 0 !important;
+            flex: 0 1 170px !important;
+            width: 170px !important;
+        }
+
+        .vega-stats-strip .vega-stat-num {
+            font-size: 32px;
+            font-weight: 700;
+            color: #0d7de8;
+            line-height: 1.1;
+        }
+
+        .vega-stats-strip .vega-stat-label {
+            font-size: 13px;
+            color: #555;
+            margin-top: 4px;
+            max-width: 170px;
+        }
+
+        /* ── Boxed callouts (Market Validation) ── */
+        .vega-box {
+            border: 1px solid #cfeeea;
+            border-radius: 6px;
+            padding: 22px 24px;
+            margin-bottom: 24px;
+            background: #fbfffe;
+        }
+
+        .vega-box h4 {
+            margin-top: 0;
+            color: #123a63;
+            font-weight: 700;
+        }
+
+        .vega-box ul {
+            padding-left: 18px;
+            margin-bottom: 0;
+        }
+
+        .vega-box ul li {
+            margin-bottom: 8px;
+            color: #444;
+            line-height: 1.5;
+        }
+
+        /* ── Revenue model cards ── */
+        .vega-revenue-card {
+            border-top: 4px solid #14b8a6;
+            border-radius: 4px;
+            background: #f9f9f9;
+            border-left: 1px solid #e0e0e0;
+            border-right: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 20px 18px;
+            margin-bottom: 24px;
+            height: 100%;
+        }
+
+        .vega-revenue-card h5 {
+            font-weight: 700;
+            color: #0d7de8;
+            margin-bottom: 10px;
+        }
+
+        /* ── Roadmap timeline ── */
+        .vega-roadmap-item {
+            display: flex;
+            gap: 18px;
+            margin-bottom: 30px;
+        }
+
+        .vega-roadmap-num {
+            flex-shrink: 0;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #123a63;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 17px;
+        }
+
+        .vega-roadmap-body h5 {
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: #123a63;
+        }
+
+        .vega-roadmap-body ul {
+            padding-left: 18px;
+            margin-bottom: 0;
+        }
+
+        .vega-roadmap-body ul li {
+            color: #555;
+            margin-bottom: 4px;
+        }
+
+        /* ── Founder card ── */
+        .vega-founder-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 20px;
+            height: 100%;
+        }
+
+        .vega-founder-card h5 {
+            font-weight: 700;
+            color: #123a63;
+        }
+
+        /* ── Competitive table ── */
+        .vega-compare-table th {
+            background: #123a63;
+            color: #fff;
+        }
+
+        .vega-compare-table td strong {
+            color: #0d7de8;
+        }
+
+        .section-heading {
+            font-weight: 700;
+            color: #123a63;
+            margin-bottom: 8px;
+        }
+
+        .section-subheading {
+            color: #777;
+            margin-bottom: 32px;
+        }
+    </style>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-92LWMHBF8K"></script>
@@ -52,7 +413,7 @@
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products</a>
                                 <ul class="dropdown-menu" style="text-align:center">
-                                    <li><a href="https://vegaaitravel.com/">VegaAI</a></li>
+                                    <li><a href="https://vegaai.html.com/">VegaAI</a></li>
                                     <li><a href="marisai.html">MarisAI</a></li>
                                     <li><a href="spicaai.html">SpicaAI</a></li>
                                     <li><a href="legalprodigyai.html">LegalProdigyAI</a></li>
@@ -87,64 +448,219 @@
         </header>
         <!-- end header -->
 
+        <!-- ═══ HERO BANNER ═══ -->
+        <div class="platform-hero">
+            <div class="container">
+                <div class="hero-inner">
+                    <div class="hero-text">
+                        <div class="hero-title-row">
+                            <div class="hero-icon-wrap">
+                                <img src="img/vegalogo.jpg" alt="VegaAI logo" />
+                            </div>
+                            <h1 class="hero-title">VegaAI</h1>
+                            <span class="hero-badge">AI Travel Co-pilot</span>
+                            <span class="hero-badge">Real-Time RAG</span>
+                        </div>
+                        <h3 class="hero-sub">Our brightest insights for your most memorable travels, powered by real-time influencer content.</h3>
+                        <p class="hero-sub">Real-Time Curation &middot; Voice-Enabled &middot; Safety-First &middot; Personalized Recommendations</p>
+                    </div>
+                </div>
+                <div class="hero-modules">
+                    <div class="hero-module-card">
+                        <i class="fa fa-bolt"></i>
+                        <div class="hm-title">Speed & Specificity</div>
+                        <div class="hm-sub">Answers to hyper-specific queries in under 2 seconds</div>
+                    </div>
+                    <div class="hero-module-card">
+                        <i class="fa fa-shield"></i>
+                        <div class="hm-title">Accuracy</div>
+                        <div class="hm-sub">&lt;1% bias &amp; misinformation via proprietary RAG</div>
+                    </div>
+                    <div class="hero-module-card">
+                        <i class="fa fa-refresh"></i>
+                        <div class="hm-title">Freshness</div>
+                        <div class="hm-sub">95% of surfaced content posted within 24 hours</div>
+                    </div>
+                    <div class="hero-module-card">
+                        <i class="fa fa-exclamation-triangle"></i>
+                        <div class="hm-title">Safety-First</div>
+                        <div class="hm-sub">"Things Not To Do" &amp; pre-travel readiness checks</div>
+                    </div>
+                    <div class="hero-module-card">
+                        <i class="fa fa-user"></i>
+                        <div class="hm-title">Personalization</div>
+                        <div class="hm-sub">Recommendations based on travel style &amp; history</div>
+                    </div>
+                    <div class="hero-module-card">
+                        <i class="fa fa-microphone"></i>
+                        <div class="hm-title">Voice-Enabled</div>
+                        <div class="hm-sub">Natural language processing for hands-free use</div>
+                    </div>
+                    <div class="hero-module-card">
+                        <i class="fa fa-instagram"></i>
+                        <div class="hm-title">Multi-Platform Curation</div>
+                        <div class="hm-sub">Instagram, YouTube &amp; TikTok, distilled</div>
+                    </div>
+                    <div class="hero-module-card">
+                        <i class="fa fa-cogs"></i>
+                        <div class="hm-title">Efficient AI Core</div>
+                        <div class="hm-sub">Quantization, LoRA &amp; Chain-of-Thought reasoning</div>
+                    </div>
+                </div>
+                <div class="hero-links">
+                    <a href="https://polarisailabs-vega.hf.space" class="btn-primary-hero"><i class="fa fa-play-circle"></i> Try VegaAI</a>
+                </div>
+            </div>
+        </div>
 
-
+        <!-- ═══ PROBLEM / SOLUTION ═══ -->
         <section class="callaction">
             <div class="container">
                 <div class="row">
-                    <p><br /></p>
-                    <div class="col-md-5 col-md-offset-3">
-                        <img loading="lazy" class="img-responsive" src="img/vegaai.png" alt="">
-                    </div>
                     <span class="clear spacer_responsive_hide_mobile" style="height:28px;display:block;"></span>
-                    <p style="text-align:justify">
-                        VegaAI addresses the critical problem of travelers wasting hours sifting through outdated,
-                        generic travel advice that often
-                        leads to poor trip decisions, while real-time, location-specific insights remain buried across
-                        fragmented social media channels.
-                        The solution is the world's first AI-powered travel assistant that delivers real-time, verified
-                        destination updates sourced
-                        directly from top travel influencers using advanced Retrieval-Augmented Generation and
-                        fine-tuned AI models to curate
-                        Instagram, YouTube, and TikTok content, providing instant answers to location specific queries
-                        like "What's new in Havelock
-                        Island today?" in under 2 seconds. <br /><br /> The platform's key features include real-time
-                        content curation with 95% of surfaced
-                        content posted within the past 24 hours, voice-enabled natural language processing for intuitive
-                        interaction, a safety-first
-                        approach providing "Things Not To Do" guidance for destination-specific risks, pre-travel
-                        prerequisites covering document,
-                        health, and safety readiness checks, and advanced AI technology leveraging Quantization, LoRA
-                        optimization, and
-                        Chain-of-Thought reasoning. <br /><br />VegaAI’s competitive edge lies in delivering
-                        hyper-specific, time-sensitive insights through
-                        sub-2 second query response times, less than 1% bias and misinformation incidents through
-                        proprietary RAG
-                        implementation, real-time influencer content curation for maximum freshness, comprehensive risk
-                        mitigation guidance
-                        for enhanced safety, and personalized recommendations based on individual travel style and
-                        history. The platform's
-                        success metrics target query-to-recommendation time under 2 seconds, update freshness with 95%
-                        of content within
-                        24 hours, user satisfaction exceeding 90% positive ratings, reliability with less than 1% bias
-                        and misinformation incidents,
-                        and high engagement through saves, shares, and click-through rates. <br /><br />Unlike generic
-                        travel platforms, VegaAI combines
-                        speed, accuracy, freshness, safety, and personalization to transform how travelers access and
-                        utilize destination information
-                        by providing verified, real-time insights from trusted influencer sources, positioning itself as
-                        the essential travel companion
-                        for next-generation travelers in the rapidly evolving travel technology landscape.
-                    </p>
-                    <p style="text-align:center">
-                        Try VegaAI, Our brightest insights platform for your most memorable travels, powered by
-                        real-time influencer content.
-                    </p>
+                    <div class="col-lg-12">
+                        <h2 class="section-heading" style="text-align:center">Vega: Revolutionising Travel Planning</h2>
+                        <p class="section-subheading" style="text-align:center">Today's travelers face a frustrating paradox &mdash; countless hours spent searching, only to find generic, outdated advice.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 style="font-weight:700;">The Problem</h4>
+                        <p style="text-align:justify">
+                            Today's travelers face a frustrating paradox: countless hours spent searching, only to find
+                            generic, outdated advice leading to disappointing experiences. Critical real-time insights
+                            remain buried across fragmented social media feeds, creating a significant gap between
+                            planning and reality.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 style="font-weight:700;">Our Solution</h4>
+                        <p style="text-align:justify">
+                            PolarisAI Labs introduces VegaAI, the world's first AI travel co-pilot delivering verified,
+                            real-time updates sourced directly from top travel influencers. Using advanced RAG 2.0 and
+                            fine-tuned AI models, Vega curates fresh content from social platforms like Instagram,
+                            YouTube, and TikTok &mdash; answering queries like "What's new in Havelock Island today?" in
+                            under 2 seconds.
+                        </p>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="vega-stats-strip">
+                            <div>
+                                <div class="vega-stat-num">&lt;3s</div>
+                                <div class="vega-stat-label">Query Response &mdash; from question to recommendation</div>
+                            </div>
+                            <div>
+                                <div class="vega-stat-num">95%</div>
+                                <div class="vega-stat-label">Content Freshness &mdash; updates within 24 hours</div>
+                            </div>
+                            <div>
+                                <div class="vega-stat-num">&lt;1%</div>
+                                <div class="vega-stat-label">Misinformation &mdash; minimal bias / misinformation incidents</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <!-- ═══ ABOUT / FULL NARRATIVE ═══ -->
+        <section id="content" style="background:#fafafa;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p style="text-align:justify">
+                            VegaAI addresses the critical problem of travelers wasting hours sifting through outdated,
+                            generic travel advice that often leads to poor trip decisions, while real-time,
+                            location-specific insights remain buried across fragmented social media channels. The
+                            solution is the world's first AI-powered travel assistant that delivers real-time, verified
+                            destination updates sourced directly from top travel influencers using advanced
+                            Retrieval-Augmented Generation and fine-tuned AI models to curate Instagram, YouTube, and
+                            TikTok content, providing instant answers to location specific queries like "What's new in
+                            Havelock Island today?" in under 2 seconds.
+                            <br /><br />
+                            The platform's key features include real-time content curation with 95% of surfaced content
+                            posted within the past 24 hours, voice-enabled natural language processing for intuitive
+                            interaction, a safety-first approach providing "Things Not To Do" guidance for
+                            destination-specific risks, pre-travel prerequisites covering document, health, and safety
+                            readiness checks, and advanced AI technology leveraging Quantization, LoRA optimization, and
+                            Chain-of-Thought reasoning.
+                            <br /><br />
+                            VegaAI's competitive edge lies in delivering hyper-specific, time-sensitive insights through
+                            sub-2 second query response times, less than 1% bias and misinformation incidents through
+                            proprietary RAG implementation, real-time influencer content curation for maximum freshness,
+                            comprehensive risk mitigation guidance for enhanced safety, and personalized recommendations
+                            based on individual travel style and history. The platform's success metrics target
+                            query-to-recommendation time under 2 seconds, update freshness with 95% of content within 24
+                            hours, user satisfaction exceeding 90% positive ratings, reliability with less than 1% bias
+                            and misinformation incidents, and high engagement through saves, shares, and click-through
+                            rates.
+                            <br /><br />
+                            Unlike generic travel chatbots, VegaAI combines speed, accuracy, freshness, safety, and
+                            personalization to transform how travelers access and utilize destination information by
+                            providing verified, real-time insights from trusted influencer sources, positioning itself
+                            as the essential travel companion for next-generation travelers in the rapidly evolving
+                            travel technology landscape.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <!-- ═══ COMPETITIVE ADVANTAGE ═══ -->
         <section id="content">
             <div class="container">
+                <h2 class="section-heading" style="text-align:center">Our Competitive Advantage</h2>
+                <p class="section-subheading" style="text-align:center">VegaAI is fundamentally different from generic travel platforms and traditional search engines &mdash; built on five key pillars.</p>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="table-responsive">
+                            <table class="table table-bordered vega-compare-table">
+                                <thead>
+                                    <tr>
+                                        <th>Feature</th>
+                                        <th>VegaAI by PolarisAI Labs</th>
+                                        <th>Generic Travel Platforms / Social Media</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Speed &amp; Specificity</strong></td>
+                                        <td>Delivers answers to hyper-specific queries in under 2 seconds.</td>
+                                        <td>Slow, manual search process with generic, often irrelevant results.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Accuracy</strong></td>
+                                        <td>Guarantees &lt;1% bias and misinformation through a proprietary RAG implementation.</td>
+                                        <td>Riddled with outdated information, sponsored content, and user-generated noise.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Freshness</strong></td>
+                                        <td>Curates real-time influencer content, with 95% of updates posted in the last 24 hours.</td>
+                                        <td>Content is often months or years old, making it unreliable for planning.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Safety-First Approach</strong></td>
+                                        <td>Provides proactive "Things Not To Do" guidance and pre-travel readiness checks.</td>
+                                        <td>Lacks structured safety information, exposing travelers to avoidable risks.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Personalization</strong></td>
+                                        <td>Leverages AI to deliver recommendations based on individual travel style and history.</td>
+                                        <td>Offers one-size-fits-all recommendations that ignore personal preferences.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ VEGA IN ACTION (LIVE DEMO) ═══ -->
+        <!--<section id="content" style="background:#fafafa;">
+            <div class="container">
+                <h2 class="section-heading" style="text-align:center">Vega in Action</h2>
+                <p class="section-subheading" style="text-align:center">Try the latest prototype below &mdash; ask about any destination and see real-time, curated insights.</p>
                 <div class="row justify-content-center">
                     <div class="col-md-12 col-lg-12">
                         <div class="about-logo">
@@ -155,34 +671,16 @@
                         </div>
                     </div>
                 </div>
-                <hr />
-            </div>
-        </section>
-
-        <!--<section id="content">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-7 col-lg-7 col-md-offset-2">
-                        <div class="about-logo">
-                            <div class="embed-responsive embed-responsive-16by9">
-                                <iframe class="embed-responsive-item" src="https://polarisailabs-contactform.hf.space" frameborder="0" width="100%" height="700" style="max-width: 100%;"></iframe>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>-->
 
+        
+
+        <!-- ═══ CONTACT FORM ═══ -->
         <section id="content">
             <div class="container">
                 <div class="row">
                     <div class="col-md-5 col-lg-5 col-md-offset-3">
-                        <!--<div class="alert alert-success hidden" id="contactSuccess">
-                    <strong>Success!</strong> Your message has been sent to us.
-                </div>
-                <div class="alert alert-error hidden" id="contactError">
-                    <strong>Error!</strong> There was an error sending your message.
-                </div>-->
                         <h4 class="pageTitle" style="text-shadow: 0px 0px 1px black;text-align:center;color:black">
                             Please contact us with any questions or feedback</h4><br /><br /><br /><br />
 
@@ -224,18 +722,18 @@
                 <div class="container">
                     <div class="testi-icon-area">
                         <div class="quote">
-                            <i class="fa fa-microphone"></i>
+                            <i class="fa fa-plane"></i>
                         </div>
                     </div>
                     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
-                            <li data-target="#carousel-example-generic" data-slide-to="0" class="">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active">
                                 <a href="#"></a>
                             </li>
                             <li data-target="#carousel-example-generic" data-slide-to="1" class="">
                                 <a href="#"></a>
                             </li>
-                            <li data-target="#carousel-example-generic" data-slide-to="2" class="active">
+                            <li data-target="#carousel-example-generic" data-slide-to="2" class="">
                                 <a href="#"></a>
                             </li>
                         </ol>
@@ -245,7 +743,7 @@
                                     <b>- Did You Know -</b>
                                 </p>
                                 <p>
-                                    72% of launched products fail - HBR
+                                    42% of travelers trust influencer recommendations over traditional ads - Travelboom
                                 </p>
                             </div>
                             <div class="item">
@@ -253,8 +751,7 @@
                                     <b>- Did You Know -</b>
                                 </p>
                                 <p>
-                                    70% of YouTube views, 80% of Netflix views and 35% of Amazon views come through the
-                                    recommendation engine
+                                    The influencer marketing industry reaches $32.55 billion in 2025, headed to $37.8 billion by 2030 - Influencer Marketing Hub
                                 </p>
                             </div>
                             <div class="item">
@@ -262,7 +759,7 @@
                                     <b>- Did You Know -</b>
                                 </p>
                                 <p>
-                                    92% of users click on an item in the first page of Google search results
+                                    60% of consumers found influencers most useful when producing travel content - Statista
                                 </p>
                             </div>
 
@@ -376,3 +873,11 @@
                     alert("Thanks for contacting us. We will get back to you soon");
                 } else {
                     alert("There was an error processing the data.");
+                }
+            };
+            xhr.send(formData);
+        });
+    </script>
+</body>
+
+</html>
